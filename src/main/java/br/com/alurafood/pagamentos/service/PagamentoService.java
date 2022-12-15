@@ -46,4 +46,8 @@ public class PagamentoService {
         pagamento = repository.save(pagamento);
         return modelMapper.map(pagamento, PagamentoDto.class);
     }
+
+    public void excluirPagamento(Long id){
+        repository.deleteById(id);
+    }
 }
